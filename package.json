@@ -11,10 +11,9 @@
         "start": "if-env NODE_ENV=production&& npm run start:prod || npm run start:dev",
         "start:prod": "node server.js",
         "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-        "client": "cd client && npm run start",
-        "install": "cd client && yarn install",
+        "install": "yarn install",
         "apitest": "set NODE_ENV=test&& jest ./tests",
-        "test": "set NODE_ENV=test&& jest ./tests&&cd client&& yarn test"
+        "test": "npm run apitest"
     },
     "author": "",
     "license": "ISC",
