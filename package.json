@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
+    "homepage": "https://kayle7777.herokuapp.com/",
     "jest": {
         "testRegex": "tests/.*\\.(js|jsx)$"
     },
@@ -11,11 +12,7 @@
         "start:prod": "node server.js",
         "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
         "client": "cd client && npm run start",
-        "seed": "node scripts/seedDB.js",
         "install": "cd client && yarn install",
-        "build": "cd client && npm run build",
-        "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-        "rtest": "cd client && yarn test",
         "apitest": "set NODE_ENV=test&& jest ./tests",
         "test": "set NODE_ENV=test&& jest ./tests&&cd client&& yarn test"
     },
@@ -32,8 +29,6 @@
         "body-parser": "^1.18.3",
         "dotenv": "^6.2.0",
         "express": "^4.16.3",
-        "if-env": "^1.0.4",
-        "react": "^16.7.0-alpha.2",
-        "react-dom": "^16.7.0-alpha.2"
+        "if-env": "^1.0.4"
     }
 }
