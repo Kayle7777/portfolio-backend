@@ -4,10 +4,12 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv').config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 app.use(routes);
 
 if (process.env.NODE_ENV === 'test') {
